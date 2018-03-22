@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+.columns {
+    float: left;
+    width: 20%;
+    padding: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}

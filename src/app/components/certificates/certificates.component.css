@@ -1,0 +1,27 @@
+.w3-row-padding img {
+	margin-bottom: 12px;
+}
+
+.w3-row-padding img:hover {
+	opacity: 0.6; transition: 1s
+}
+
+.w3-quarter img {
+	margin-bottom: -6px; cursor: pointer
+}
+
+.w3-quarter img:hover {
+	opacity: 0.6; transition: 0.3s
+}
+
+.columns {
+    float: left;
+    width: 50%;
+    padding: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}

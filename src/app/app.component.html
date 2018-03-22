@@ -1,20 +1,155 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="w3-light-grey w3-content" content="no-cache" style="max-width:1600px">
 
+  <!-- <body> -->
+
+  <!-- Sidebar -->
+  <nav class="w3-sidebar w3-white w3-animate-left" style="display:none;padding-top:100px;z-index:3;width:300px;" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="assets/img/12.png" style="width:80%;" class="w3-round"><br><br>
+    <div class="w3-bar-block">
+      <a href="/" onclick="w3_close();refresh()" class="w3-bar-item w3-button w3-text-grey w3-hover-orange"><i class="fa fa-home fa-3x fa-fw w3-margin-right"></i>HOME</a>
+      <a routerLink="/about" onclick="w3_close()" class="w3-bar-item w3-button w3-text-grey w3-hover-orange"><i class="fa fa-user fa-3x fa-fw w3-margin-right"></i>ABOUT US</a>
+      <a routerLink="/subsidiaries" onclick="w3_close()" class="w3-bar-item w3-button w3-text-grey w3-hover-orange"><i class="fa fa-users fa-3x fa-fw w3-margin-right"></i>SUBSIDIARIES</a>
+      <a routerLink="/associates" onclick="w3_close()" class="w3-bar-item w3-button w3-text-grey w3-hover-orange"><i class="fa fa-handshake-o fa-3x fa-fw w3-margin-right"></i>ASSOCIATES</a>    
+      <a routerLink="/certificates"onclick="w3_close()" class="w3-bar-item w3-button w3-text-grey w3-hover-orange"><i class="fa fa-certificate fa-3x fa-fw w3-margin-right"></i>CERTIFICATES</a>
+      <a routerLink="/gallery" onclick="w3_close()" class="w3-bar-item w3-button w3-text-grey w3-hover-orange"><i class="fa fa-folder-open fa-3x fa-fw w3-margin-right"></i>GALLERY</a>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button w3-bar-item w3-button w3-text-grey w3-hover-orange"><i class="fa fa-link fa-3x fa-fw w3-margin-right"></i>LINKS
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="w3-dropdown-content w3-bar-block">
+          <a href="http://www.mot.gov.my/en" class="w3-bar-item w3-button">Ministry of Transport</a>
+          <a href="http://www.customs.gov.my/en" class="w3-bar-item w3-button">Royal Malaysian Customs Department</a>
+          <a href="http://tariff.customs.gov.my/" class="w3-bar-item w3-button">Customs Tariff</a>
+          <a href="http://www.pka.gov.my/" class="w3-bar-item w3-button">Port Klang Authority</a>
+          <a href="http://www.westportsmalaysia.com/" class="w3-bar-item w3-button">WestPorts</a>
+          <a href="https://www.northport.com.my/npv2/index.html" class="w3-bar-item w3-button">NorthPort</a>
+          <a href="http://www.pkfz.com/" class="w3-bar-item w3-button">Port Klang Free Zone</a>
+          <a href="https://www.spad.gov.my/" class="w3-bar-item w3-button">Suruhanjaya Pegangkutan Awam Darat</a>
+          <a href="http://www.sffla.com/" class="w3-bar-item w3-button">Selangor Freight Forwarders and Logistics Association</a>
+          <a href="http://www.sam.org.my/index.htm" class="w3-bar-item w3-button">Shipping Association Malaysia</a>
+          <a href="http://www.malaysianports.com.my/" class="w3-bar-item w3-button">Central Region Shipping Association</a>
+          <a href="http://masa.org.my/" class="w3-bar-item w3-button">Malaysia Shipowners' Association</a>
+          <a href="http://amh.org.my/" class="w3-bar-item w3-button">Association Of Malaysian Hauliers</a>
+          <a href="http://www.miti.gov.my/" class="w3-bar-item w3-button">Ministry of International Trade and Industry</a>
+          <a href="http://www.mida.gov.my/home/" class="w3-bar-item w3-button">Malaysian Investment Development Authority</a>
+          <a href="http://www.matrade.gov.my/en/" class="w3-bar-item w3-button">Malaysia External Trade Development Corporation</a>
+        </div>
+      </div> 
+      <a routerLink="/career" onclick="w3_close()" class="w3-bar-item w3-button w3-text-grey w3-hover-orange"><i class="fa fa-id-badge fa-3x fa-fw w3-margin-right"></i>CAREER</a>
+      <a routerLink="/contact" onclick="w3_close()" class="w3-bar-item w3-button w3-text-grey w3-hover-orange"><i class="fa fa-phone fa-3x fa-fw w3-margin-right"></i>CONTACT US</a>
+    </div>
+  </nav>
+
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:0px">
+
+    <!-- Header -->
+    <a routerLink="/"><img src="assets/img/12.png" style="width:65px;" class="w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+      <header class="w3-container w3-center w3-padding-10 w3-white">
+        <img class="w3-image" src="assets/img/real.jpg" width="800" height="81060">
+        <!-- <h1 class="w3-xxxlarge"><b>SWATIC SDN BHD</b></h1> -->
+        <h4><i>We Architect Solutions For Our Customers</i></h4>
+
+        <div class="navbar w3-hide-medium w3-hide-small">
+          <a href="/">Home</a>
+          <a routerLink="/about">About Us</a>
+          <a routerLink="/subsidiaries">Subsidiaries</a>
+          <a routerLink="/associates">Associates</a>
+          <a routerLink="/certificates">Certificates</a>
+          <a routerLink="/gallery">Gallery</a>
+
+          <div class="dropdown">
+            <button class="dropbtn">Links
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="http://www.mot.gov.my/en">Ministry of Transport</a>
+              <a href="http://www.customs.gov.my/en">Royal Malaysian Customs Department</a>
+              <a href="http://tariff.customs.gov.my/">Customs Tariff</a>
+              <a href="http://www.pka.gov.my/">Port Klang Authority</a>
+              <a href="http://www.westportsmalaysia.com/">WestPorts</a>
+              <a href="https://www.northport.com.my/npv2/index.html">NorthPort</a>
+              <a href="http://www.pkfz.com/">Port Klang Free Zone</a>
+              <a href="https://www.spad.gov.my/">Suruhanjaya Pegangkutan Awam Darat</a>
+              <a href="http://www.sffla.com/">Selangor Freight Forwarders and Logistics Association</a>
+              <a href="http://www.sam.org.my/index.htm">Shipping Association Malaysia</a>
+              <a href="http://www.malaysianports.com.my/">Central Region Shipping Association</a>
+              <a href="http://masa.org.my/">Malaysia Shipowners' Association</a>
+              <a href="http://amh.org.my/">Association Of Malaysian Hauliers</a>
+              <a href="http://www.miti.gov.my/">Ministry of International Trade and Industry</a>
+              <a href="http://www.mida.gov.my/home/">Malaysian Investment Development Authority</a>  
+              <a href="http://www.matrade.gov.my/en/">Malaysia External Trade Development Corporation</a>             
+            </div>
+          </div>
+
+          <a routerLink="/career">Career</a>
+          <a routerLink="/contact">Contact Us</a>
+        </div>
+
+        <div class="w3-section w3-bottombar w3-padding-10">
+        </div>
+
+      </header>
+
+    </div>
+
+    <div class="w3-row">
+
+      <router-outlet></router-outlet>
+
+    </div>
+
+    <div class="w3-container w3-padding-32 w3-dark-grey w3-row-padding">
+      <h3>OUR GROUP OF COMPANIES</h3>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="columns">
+          <div class="w3-container w3-dark-grey">
+            <h3><p class="w3-center"><b><a routerLink="/subsidiaries" style="color:orange">&#9679; Swatic Sdn Bhd</a></b></p></h3>
+          </div>
+          <div class="w3-container w3-dark-grey">
+            <h3><p class="w3-center">(Total Logistics)</p></h3>
+          </div>
+        </div>
+        <div class="columns w3-margin-bottom">
+          <div class="w3-container w3-dark-grey">
+            <h3><p class="w3-center"><b><a routerLink="/subsidiaries" style="color:orange">&#9679; Syarikat Universal</a></b></p></h3>
+          </div>
+          <div class="w3-container w3-dark-grey">
+            <h3><p class="w3-center">(Forwarding)</p></h3>
+          </div>
+        </div>
+        <div class="columns w3-margin-bottom">
+          <div class="w3-container w3-dark-grey">
+            <h3><p class="w3-center"><b><a routerLink="/subsidiaries" style="color:orange">&#9679; Swatic Integrated Movers Sdn Bhd</a></b></p></h3>
+          </div>
+          <div class="w3-container w3-dark-grey">
+            <h3><p class="w3-center">(Haulage & Transportation)</p></h3>
+          </div>
+        </div>
+        <div class="columns w3-margin-bottom">
+          <div class="w3-container w3-dark-grey">
+            <h3><p class="w3-center"><b><a routerLink="/subsidiaries" style="color:orange">&#9679; Swatic Warehouse Sdn Bhd</a></b></p></h3>
+          </div>
+          <div class="w3-container w3-dark-grey">
+            <h3><p class="w3-center">(Warehouse)</p></h3>
+          </div>
+        </div>
+        <div class="columns w3-margin-bottom">
+          <div class="w3-container w3-dark-grey">
+            <h3><p class="w3-center"><b><a routerLink="/subsidiaries" style="color:orange">&#9679; Swatic Resources</a></b></p></h3>
+          </div><div class="w3-container w3-dark-grey">
+          <h3><p class="w3-center">(Trading)</p></h3>
+        </div>
+      </div>         
+    </div>  
+  </div>
+</div>
+</div>

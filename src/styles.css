@@ -1,1 +1,172 @@
 /* You can add global styles to this file, and also import other style files */
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+
+.navbar {
+  /*overflow: visible;*/
+  background-color: #707070;
+  /*font-family: Arial;*/
+  margin:0 auto;
+  width:1300px;
+}
+
+.navbar a {
+  transition: all 0.3s ease;
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  width:150px;
+}
+
+.dropdown {
+  float: left;
+}
+
+.dropdown .dropbtn {
+  transition: all 0.3s ease;
+  font-size: 16px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #FF4500;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#fixedbutton {
+  position: fixed;
+  height:80px;
+  width:80px;
+  bottom: 10px;
+  right: 10px; 
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  background-color: #F0F0F0;
+}
+
+.container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.container img {margin-bottom: -1px}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.contentts
+{
+  height:500px;
+  overflow:auto;
+  background:#fff;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.5;
+}
+
+@keyframes myChange {
+  from {
+    height: 100px;
+    } to {
+      height: 0;
+    }
+  }
+
+  div.ng-hide {
+    animation: 0.5s myChange;
+  }
